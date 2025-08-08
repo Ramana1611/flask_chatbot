@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutrition Assistant </title>
+    <style>
+        body { font-family: Arial; padding: 30px; background-color: #f0f0f0; }
+        .chat-box { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
+        input[type="text"] { width: 100%; padding: 10px; margin-top: 10px; }
+        button { padding: 10px 20px; margin-top: 10px; }
+        .response { margin-top: 20px; padding: 10px; background-color: #e9ffe9; border-left: 5px solid green; }
+    </style>
+</head>
+<body>
+    <div class="chat-box">
+        <h2>Nutrition Assistant </h2>
+        <form method="POST">
+            <label>Ask your diet-related question:</label><br>
+            <input type="text" name="user_input" required><br>
+            <button type="submit">Ask</button>
+        </form>
+        {% if response %}
+            <div class="response">
+                <strong>Nutrition Assistant:</strong><br>
+                {{ response }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
